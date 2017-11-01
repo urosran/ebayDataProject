@@ -1,0 +1,17 @@
+---
+title: "ebay"
+author: "Roopa,  Uros"
+date: "October 29, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+read.csv("C:/Users/Uros Randelovic/Documents/R/BUS 111/Ebay")
+```{r}
+read.csv(file="C:/Users/Uros Randelovic/Documents/R workspace/BUS 111/Ebay/data.csv",header = TRUE, )
+read.csv()
+```
+C:\Users\Uros Randelovic\Documents\R workspace\BUS 111\Ebay
