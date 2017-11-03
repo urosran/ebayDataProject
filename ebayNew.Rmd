@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "ebay Marketing Assesment"
 author: "Roopa,  Uros"
 date: "October 29, 2017"
 output: pdf_document
@@ -92,8 +92,9 @@ i. Run a regression with log(revenue) as the dependent variable, and whether
 the DMA is in the treatment group as the independent variable. 10%
 ```{r}
 options(max.print=999999)
+#how can we check if the dma is in the treatment group? What dma exactly they are all different?
 summary(lm(log(dataBay$revenue)~(dataBay$dma)))
-
+summary(lm(log(dataBay$revenue)~(factor(dataBay$dma))))
 
 ```
 
@@ -118,8 +119,10 @@ package. Any approach that works is acceptable.
 library(lubridate)
 dataBay$dateM <- month(dataBay$rDate)
 View(dataBay)
-
-summary(lm(dataBay$dma~factor(dataBay$dateM)))
+#revenue to be the y aka dependent variable 
+#what does the DMA have to do with the ad efectivenes over months? 
+#is it which cathegory of users responded well to the ad serving?
+summary(lm(dataBay$revenue~factor(dataBay$dateM)+dataBay$isTreatmentPeriod ))
 
 ```
 
